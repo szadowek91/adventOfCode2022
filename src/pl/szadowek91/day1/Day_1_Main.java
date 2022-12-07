@@ -1,7 +1,6 @@
 package pl.szadowek91.day1;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * @author PG

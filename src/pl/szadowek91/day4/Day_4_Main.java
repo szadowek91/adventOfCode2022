@@ -20,8 +20,6 @@ public class Day_4_Main {
         List<String> collect = Arrays.stream(input.split("\n")).collect(Collectors.toList());
         List<List<String>> collect1 = collect.stream().map(s -> Arrays.stream(s.split(",")).collect(Collectors.toList())).collect(Collectors.toList());
 
-//        List<List<String[]>> collect2 = collect1.stream().map(s -> s.stream().map(d -> d.split("-")).collect(Collectors.toList())).collect(Collectors.toList());
-
         List<List<List<Integer>>> collect3 = collect1.stream()
                 .map(s -> s.stream()
                         .map(d -> {
@@ -35,18 +33,14 @@ public class Day_4_Main {
                 .filter(l -> l.get(1).containsAll(l.get(0)))
                 .collect(Collectors.toList());
 
-//        getNumbersUsingIntStreamRange();
-
         int size = collect3.size();
 
-        System.out.println("TEST");
+        System.out.println(size);
     }
 
     private static void splitLines_part2(String input) {
         List<String> collect = Arrays.stream(input.split("\n")).collect(Collectors.toList());
         List<List<String>> collect1 = collect.stream().map(s -> Arrays.stream(s.split(",")).collect(Collectors.toList())).collect(Collectors.toList());
-
-//        List<List<String[]>> collect2 = collect1.stream().map(s -> s.stream().map(d -> d.split("-")).collect(Collectors.toList())).collect(Collectors.toList());
 
         List<List<List<Integer>>> collect3 = collect1.stream()
                 .map(s -> s.stream()
@@ -61,11 +55,9 @@ public class Day_4_Main {
                 .filter(l -> l.get(0).stream().anyMatch(d -> l.get(1).contains(d)))
                 .collect(Collectors.toList());
 
-//        getNumbersUsingIntStreamRange();
-
         int size = collect3.size();
 
-        System.out.println("TEST");
+        System.out.println(size);
     }
 
     public static List<Integer> getNumbersUsingIntStreamRangeClosed(int start, int end) {
